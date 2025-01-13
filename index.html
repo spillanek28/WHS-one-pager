@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Header Styles */
+
+
+/* Body and Table and List styling */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #042350;
+}
+
+td, th {
+   border: 1px solid #042350;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+}
+
+li {
+  float: left;
+  border-right: 6px solid #F65C02;
+}
+
+li a {
+  display: block;
+  color: #F65C02;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+/* Image edits */
+.img {
+    width: 100%;
+    height: auto;
+    align-items: center;
+}
+
+/* Style the header */
+.header {
+  grid-area: header;
+  background-color: #042350;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+}
+
+/* The grid container */
+.grid-container {
+  display: grid;
+  grid-template-areas: 
+    'header header header header header header' 
+    'left middle middle middle middle right' 
+    'footer footer footer footer footer footer';
+  /* grid-column-gap: 10px; - if you want gap between the columns */
+} 
+
+.left,
+.middle,
+.right {
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+  border: #F65C02 solid 2px;
+  border-radius: 5px;
+}
+
+/* Style the left column */
+.left {
+  grid-area: left;
+}
+
+/* Style the middle column */
+.middle {
+  grid-area: middle;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Style the right column */
+.right {
+  grid-area: right;
+}
+
+/* Style the footer */
+.footer {
+  grid-area: footer;
+  background-color: #F65C02;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  .grid-container  {
+    grid-template-areas: 
+      'header header header header header header' 
+      'left left left left left left' 
+      'middle middle middle middle middle middle' 
+      'right right right right right right' 
+      'footer footer footer footer footer footer';
+  }
+}
+
+/* Text Styles */
+
+.h1 {
+  font-family: serif;
+  color: #01256F;
+}
+
+.p {
+  font-family: sans-serif;
+  color: #01256F;
+}
+
+/* Link Styling */
+
+li a:hover {
+  background-color: #042350;
+}
+
+</style>
+</head>
+<body>
+  
+<div class="grid-container">
+  <div class="header">
+    <h2><img src="images/whs logo.png" alt="walpole highschool logo"></h2>
+   <ul>
+    <li><a href="http://127.0.0.1:5500/index.html">Index</a></li> 
+    <li><a href="">About Us</a></li> 
+    <li><a href="">Contact Us</a></li>
+    <li><a href="">Schedules</a></li>
+    </ul>
+  </div>
+  
+  <div class="left" style="background-color:#fff;"><img src="images/timberwolf.png" alt="timberwolf walpole"></div>
+  <div class="middle" style="background-color:#fff;">
+    <table>
+      <tr>
+          <th rowspan="2"></th>
+      <th colspan="2"><a href="https://sites.google.com/a/walpole.k12.ma.us/athletics/">Walpole Sports</a></th>
+      <th rowspan="2"></th></tr>
+      <tr><th>Dates</th> <th>Location</th></tr>
+      <tr>
+          <th>Thursday, November 28 Boys Varsity Football</th>
+          <td>Friday, December 6 Boys Varsity Basketball</td>
+          <td>Saturday, December 7 Boys Varsity Hockey</td>
+          <td>Saturday, December 7 Girls Varsity Hockey</td>
+      </tr>
+      <tr><th>Walpole Highschool 10:00 am</th>
+          <td>Walpole Highschool 4:15 pm</td>
+          <td>Westwood Highschool 5:30 pm</td>
+          <td>Bishop Feehan 7:10 pm</td></tr>
+      </table> 
+  </div>  
+  <div class="right" style="background-color: #fff;"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2958.6374489104264!2d-71.25036762340582!3d42.136644149186324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e380f0887a24f1%3A0x5bd9ccff885069ec!2sWalpole%20High%20School!5e0!3m2!1sen!2sus!4v1729013158151!5m2!1sen!2sus" width="400" height="260" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">Map To Walpole HighSchool</iframe></div>
+  
+  <div class="footer">
+    <p>© Kate S. 24' WHS 
+      <a href="https://www.instagram.com/walpolehighschool/?hl=en" target="_blank"><img src="images/instagram logo.webp" alt="instagram logo" width="50" height="50"></a>
+      <a href="https://x.com/i/flow/login?redirect_after_login=%2FWalpoleHS" target="_blank"><img src="images/x logo remove bg.png" alt="x logo" width="50" height="50"></a> 
+    </p>
+  </div>
+</div>
+
+</body>
+</html>
+
+
